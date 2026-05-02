@@ -1,67 +1,31 @@
-## Vuefinder File Manager
+# My Testing DMS - ISTQB Playwright Practice
 
-[![GitHub](https://img.shields.io/github/license/n1crack/vuefinder)](https://github.com/n1crack/vuefinder/blob/master/LICENSE)
-[![npm](https://img.shields.io/npm/v/vuefinder)](https://www.npmjs.com/package/vuefinder)
+This repository serves as a dedicated testing environment for conducting software quality assurance in accordance with **ISTQB standards**. The project is based on the open-source file manager **VueFinder**.
 
-### About
+---
 
-A modern, customizable file manager component built for Vue.
+## 📌 Origin & Purpose
 
-Organize, preview, and manage your files through a beautiful, reactive interface — just like a native file explorer.
+This project is a fork/derivative of:
 
-Easily integrate it into your app, connect to any storage (local, S3, etc.), and craft your own cloud experience with full control over uploads, search, and customization.
+- **Original Repository:** [n1crack/vuefinder](https://github.com/n1crack/vuefinder)
+- **Purpose:** Implementing an automated test suite using **Playwright** to apply theoretical ISTQB concepts to a real-world application.
 
-If you like it, please follow and ⭐ star on GitHub.
+## 🎯 Test Objectives (ISTQB Aspects)
 
-### Demo
+Approximately 15-20 test cases will be developed within this project, covering the following QA aspects:
 
-[Live Demo](https://vuefinder.ozdemir.be/) - Explore Vuefinder's features and capabilities in action.
+- **Black-box Test Design Techniques:** Equivalence Partitioning and Boundary Value Analysis.
+- **Functional Testing:** Validation of core features (Upload, CRUD operations, file management).
+- **Error Handling & Robustness:** Verifying system behavior under invalid input conditions.
+- **Test Documentation:** Structuring test suites according to professional industry standards.
 
-### Installation
+## 🛠 Tech Stack
 
-```bash
-npm i vuefinder
-```
+- **Framework:** Vue.js (VueFinder)
+- **Test Automation:** Playwright (TypeScript)
+- **Methodology:** ISTQB Certified Tester Standard
 
-For detailed installation instructions, configuration options, and usage examples, visit the [documentation website](https://vuefinder.ozdemir.be/).
+---
 
-### Backend
-
-You can use any backend language. VueFinder talks to your server through the `driver` you provide. A driver simply calls your HTTP endpoints and returns data in the expected shape. This keeps VueFinder backend-agnostic while giving you full control over auth, storage, and business rules.
-
-- PHP (recommended for plug‑and‑play): [VueFinder Php Library 4.0](https://github.com/n1crack/vuefinder-php)
-
-Data contracts are stable and designed to be simple to implement. If you use the PHP package, these endpoints are already provided. For other stacks, mirror the same responses and you're good to go.
-
-The complete API specification is available as an [OpenAPI 3.0 specification](https://vuefinder.ozdemir.be/api-reference/openapi.html) for easy integration and validation.
-
-Older ecosystem libraries (for VueFinder 3.x and earlier):
-
-- PHP: [VueFinder Php Library 3.x](https://github.com/n1crack/vuefinder-php)
-- Python: [Python WSGI](https://github.com/abichinger/vuefinder-wsgi)
-- Go: [vuefinder-go](https://github.com/Duke1616/vuefinder-go)
-- Rust: [vuefinder-rust](https://github.com/boenfu/vuefinder-rust)
-- CloudFlare R2: [Cloudflare R2](https://github.com/NightFurySL2001/r2-explorer-demo)
-
-### Collaboration
-
-If you want to contribute to the project, please feel free to fork the repository and submit your changes as a pull request. Ensure that the changes you submit are applicable for general use rather than specific to your project.
-
-### Dependencies
-
-- [Vue 3+](https://vuejs.org/)
-- [vue-advanced-cropper](https://github.com/advanced-cropper/vue-advanced-cropper) : JavaScript image cropper
-- [viselect](https://github.com/simonwep/viselect) : Selection utility
-- [Uppy](https://github.com/transloadit/uppy) : Upload library
-- [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) : lightweight and flexible lazy loading for thumbnails
-- [mitt](https://github.com/developit/mitt) : Tiny 200 byte functional event emitter / pubsub
-- [OverlayScrollbars](https://kingsora.github.io/OverlayScrollbars) : scrollbar plugin
-- [nanostores](https://github.com/nanostores/nanostores) : A tiny state manager
-- [@nanostores/i18n](https://github.com/nanostores/i18n) : Internationalization backend for nanostores
-- [vue-sonner](https://github.com/wobsoriano/vue-sonner) : Toast notification component
-- [@floating-ui/dom](https://floating-ui.com/) : Floating UI positioning library
-- [@tanstack/vue-query](https://tanstack.com/query/v5/docs/framework/vue/overview) : fetching, caching, synchronizing and updating server state
-
-### License
-
-Copyright (c) 2018 Yusuf ÖZDEMİR, released under [the MIT license](LICENSE)
+_Note: This repository is used exclusively for educational and testing purposes._
