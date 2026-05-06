@@ -32,3 +32,32 @@ test.describe('Basic App Launch', () => {
     await expect(menuEdit.first()).toBeVisible();
   });
 });
+
+test.describe('UI Interaction Tests', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/', { waitUntil: 'networkidle' });
+  });
+
+  test('should open the File menu on click', async ({ page }) => {
+    const fileMenu = page.getByText('File', { exact: true }).first();
+    await fileMenu.click();
+
+    const newFolderOption = page.getByText('New Folder', { exact: true });
+    await expect(newFolderOption.first()).toBeVisible({ timeout: 5000 });
+  });
+
+  test.skip('should toggle the search overlay', async ({ page }) => {
+    const searchButton = page
+      .locator('button')
+      .filter({ has: page.locator('svg') })
+      .locator('visible=true');
+    await searchButton
+      .getByTitle(/Search/i)
+      .or(page.getByLabel(/Search/i))
+      .first()
+      .click();
+
+    const searchInput = page.locator('input').first();
+    await expect(searchInput).toBeVisible({ timeout: 5000 });
+  });
+});
